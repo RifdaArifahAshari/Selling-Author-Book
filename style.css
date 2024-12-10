@@ -1,0 +1,451 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .brand {
+    display: flex;
+    align-items: center;
+}
+
+header .brand img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #333;
+    font-size: 16px;
+}
+
+header .navbar-extra a {
+    margin: 0 10px;
+    color: #333;
+    font-size: 20px;
+}
+
+/* Active link style */
+header nav ul li a.active {
+    color: #1c2bb5;
+}
+
+/*Bestseller dan Rekomendasi*/
+
+/* Menu Section */
+.menu {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.menu h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.menu h2 span {
+    color: #1072aa;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.product-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
+    
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-item-title {
+    font-size: 18px;
+    margin: 15px 0 10px;
+}
+
+.product-item-price {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header .navbar-extra a {
+        display: none;
+    }
+
+    header nav ul {
+        display: none;
+    }
+
+    .menu h2 {
+        font-size: 28px;
+    }
+
+    .product-item {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    .product-item {
+        padding: 5px;
+    }
+
+    .menu h2 {
+        font-size: 24px;
+    }
+
+    .product-item-title {
+        font-size: 16px;
+    }
+}
+
+
+
+nav ul li a.active, nav ul li a:hover {
+    color: #1c2bb5;
+}
+
+/*Home.html*/
+/* Salam Pembuka Section */
+.home {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.home h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Rekomendasi Buku Section */
+.recommendation {
+    background-color: #fff;
+    padding: 40px 20px;
+    margin-top: 30px;
+}
+
+.recommendation h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1072aa;
+}
+
+/* home rekomendasi */
+.recommendation h2 span {
+    color: #040c4f;
+}
+
+.recommendation .row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.recommendation-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 280px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recommendation-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.recommendation-item h3 {
+    font-size: 22px;
+    margin-top: 15px;
+    color: #333;
+}
+
+.recommendation-item p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.recommendation-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.view-more a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #1c2bb5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.view-more a:hover {
+    color: #4fc4e1;
+}
+
+/* Bestseller Buku Section */
+.bestseller {
+    background-color: #fff;
+    padding: 40px 20px;
+    margin-top: 30px;
+}
+
+.bestseller h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1072aa;
+}
+
+.bestseller h2 span {
+    color: #040c4f;
+}
+
+.bestseller .row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.bestseller-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 280px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bestseller-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.bestseller-item h3 {
+    font-size: 22px;
+    margin-top: 15px;
+    color: #333;
+}
+
+.bestseller-item p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.bestseller-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Salam Pembuka Section */
+.home {
+    background: #f1f1f1;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.containerhome {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;  /* Add space between content */
+    padding: 0 20px;
+}
+
+.greeting {
+    flex: 1;
+    max-width: 500px;
+}
+
+.greeting h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.greeting p {
+    font-size: 18px;
+    color: #7f8c8d;
+    line-height: 1.6;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero {
+    flex: 1;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Pesan.html */
+/* Container form */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form input */
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form input[type="submit"] {
+    background-color: #333333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0d0538;
+}
+
+/* Contact  */
+#contact {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* Map */
+.row {
+    margin-top: 30px;
+    text-align: center;
+    width: 100%; /* Pastikan lebar peta memenuhi layar */
+    padding: 0;
+}
+
+.map {
+    width: 1250px; /* Mengisi seluruh lebar kontainer */
+    height: 200px; /* Atur tinggi peta sesuai kebutuhan */
+    border: 0; /* Hapus border pada iframe */
+}
